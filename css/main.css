@@ -1,37 +1,35 @@
+/* Global Styles */
+
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #fdfdfd;
+    color: #333;
 }
 
-header {
-    background: #20c04a;
+/* Header and footer */
+
+header, footer {
+    background: #2a7a2a;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     width: 100%;
 }
 
 footer {
-    background: #20c04a;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
 }
 
-main {
-    min-height: calc(100vh - 160px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* Navigation bar */
 
 nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
 }
 nav ul li {
@@ -39,26 +37,121 @@ nav ul li {
     margin: 0 10px;
 }
 
-img {
-    border: 3px solid #333;
-    padding: 5px;
-    margin: 10px;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-    padding-left    : 20px;
+nav a:hover {
+    color: orange;
 }
 
-aside {
-    width: 200px;
+/* Using different fonts and colors */
+
+h1 {
+    font-family: Georgia, serif;
+    color: #1c5d1c;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    color: darkblue;
+}
+
+p {
+    margin-bottom: 15px;
+    text-indent: 20px;
+}
+
+/* Alignments and spacing */
+
+.center-text { text-align: center; }
+.right-text { text-align: right; }
+.justify-text { text-align: justify; }
+
+section {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+p { color: darkslategray; } /* Element Selector */
+
+.highlight { color: darkred; font-weight: bold; } /* Class Selector */
+
+#special-note { color: navy; font-style: italic; } /* ID Selector */
+
+/* Layouts and images */
+
+.home-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px;
+}
+
+.home-layout section {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.home-layout aside {
+    flex: 1;
     background: #e9ffe9;
     padding: 15px;
     border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
-section {
-    margin-right: 35%;
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px;
 }
+
+.fit-img {
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profiles */
+
+.profile-card {
+    width: 280px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    background: #f9fff9;
+    margin: 20px auto;
+    transition: 0.3s;
+}
+
+.profile-card img {
+    width: 280px;
+    border-radius: 12px;
+}
+
+.profile-card:hover {
+    background: #e9ffe9;
+    border-color: #2a7a2a;
+}
+
+#trainer-name { 
+    color: darkgreen;
+}
+
+/* Forms */
 
 form {
     background: #f9f9f9;
@@ -66,45 +159,56 @@ form {
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: auto;
+}
+form input, form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
 }
 
-#highlight {
-    background: yellow;
+/* Tables */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
 }
-.article-box {
-    border: 1px solid #ccc;
+table th, table td {
+    border: 1px solid #999;
     padding: 10px;
-    margin: 15px;
+    text-align: center;
+}
+table th {
+    background: #e9ffe9;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* Side bar */
 
-body,html{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 5px;      
-    margin: 10px;
-}
-
-.content ol, 
-.content table {
-    margin-bottom: 0;
-}
-
-.fit-img {
-    max-width: 350px;
-    height: auto;
+aside {
+    float: right;              /* keeps it on the right side */
+    width: 250px;              /* fixed width */
+    background: #e9ffe9;       /* light green background */
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+aside h3 {
+    margin-top: 0;
+    color: darkgreen;
+    text-align: center;
+}
+
+aside ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+aside li {
+    margin-bottom: 10px;
+}
+
+
