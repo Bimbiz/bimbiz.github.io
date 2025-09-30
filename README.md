@@ -1,59 +1,58 @@
-Report: Creating the “Healthy Lifestyle & Fitness” Website
+Web-Technologies (Front-End)
+Assignment 2: CSS Fundamentals
+Group: SE-2438
+Team Members: Bizinskiy Timur (only 1)
+Link: https://bimbiz.github.io
 
-Project Goal
-The goal of this project was to create a simple, multi-page website that promotes a healthy lifestyle. The site includes sections about fitness routines, nutrition, wellness, and contact information. It was designed with a clean structure, simple navigation, and images to make the content engaging.
+First of all, to follow the requirements I had to rewrite nearly everything in main.css and I started with body. I’ve added line-height for readability and colors to it:
+ 
+Then I’ve decided to rewrite header and footer, here how they were looking like: 
+And how they’re looking like right now: 
+ 
+(P.S. I’ve changed padding to 10px because 20px was too big)
+I combined them to make it easier to write, because they had pretty much similar parameters, but also, I had to make footer’s position fixed, so I had no choice but to write its additional parameters below:
+ 
+Added “margin: 0” to navigation bar’s unordered lists:
+ 
+Styled “nav a” and added to it hover effect:
+ 
+That’s how paragraphs and headers were last time:
+ 
+And that’s how it looks like now:
+ 
+Code was to display special texts; I’ll return to it later.
+Next were spacing and alignment:
+ 
+Then there were selectors:
+ 
+Changed layouts and images parameters:
+ 
+ 
+I’ve decided to create styling for trainers’ profile cards to put them in wellness.html:
+ 
 
-Structure
-The website consists of several HTML pages:
+Then styled a form from contact.html:
+ 
+Restyled tables:
+ 
+Then, side bar:
+ 
+Moving to html files, starting from main page:
+ 
+ 
+Changed navigation bar, now links in a side bar have hover orange effect when clicking on them, a little border around the main section and side bar. Also removed footers from every page except the home and contact pages.
+Used <code> in: fitness.html and nutrition.html
+ 
+ 
+ 
+ 
+Added a trainer’s profile card to the wellness.ht ml
+ 
+Changed a little the contact.html page:
+ 
+ 
+Submit button is changing its color when you navigate to it:
+  
 
-Home Page: An introduction with a welcome message, an image, and quick links.
 
-Fitness Page: A workout plan, weekly schedule, and an image.
 
-Nutrition/Wellness Pages: Informational sections.
-
-Contact Page: A form where users can enter their name, email, and a question.
-
-All pages share a consistent header (with navigation links) and a footer (with contact details).
-
-Layout & Design
-Header and Footer:
-
-The header contains the site title and navigation menu.
-
-Both header and footer use a green background that stretches across the whole width of the page.
-
-CSS was used to fix alignment and spacing.
-
-Main Content:
-
-The text sections (headings, paragraphs, lists) were styled with proper margins.
-
-Tables were used for the weekly workout schedule.
-
-Blockquotes with author attribution were used for citations.
-
-Images:
-
-Images were added to make the site visually appealing as much as possible for me right now. 4. CSS Styling
-
-Flexbox: Used in .content sections to align text and images side by side. Example:
-
-.content { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
-
-Typography and Spacing: Margins were added at the beginning of text paragraphs for readability.
-
-Responsive Design: The layout adjusts when the screen is smaller, so the image stacks under the text.
-
-Forms
-The Contact Page includes a form with:
-
-Name input
-
-Email input
-
-Question input
-
-Submit button
-
-The form was centered using Flexbox, and spacing was applied for usability.
