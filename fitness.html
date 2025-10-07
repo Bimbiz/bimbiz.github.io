@@ -4,42 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Routines</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <style>
-        h1{color: rgb(255, 255, 255);}
-    </style>
 </head>
 <body>
-    <header>
-        <h1>Fitness Routines</h1>
-        <nav>
-            <a href="index.html">Home</a></li> |
-            <a href="nutrition.html">Nutrition</a></li> |
-            <a href="wellness.html">Wellness</a></li>
-        </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Fit & Well</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="fitness.html">Fitness</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nutrition.html">Nutrition</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wellness.html">Wellness</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<div class="content">
-    <div class="workout-text"> <!--Created it to style later-->
-        <h2>Workout Plan</h2>
-        <ol>
-            <li><code>Jogging</code> - 5 min warm-up</li>
-            <li><code>Push-ups</code> - 3 sets of 15 reps</li>
-            <li><code>Cycling</code> - 20 min cardio</li>
-            <li><code>Stretching</code> - 10 min recovery</li>
-        </ol>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Workout Plan</h2>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item"><code>Jogging</code> - 5 min warm-up</li>
+                            <li class="list-group-item"><code>Push-ups</code> - 3 sets of 15 reps</li>
+                            <li class="list-group-item"><code>Cycling</code> - 20 min cardio</li>
+                            <li class="list-group-item"><code>Stretching</code> - 10 min recovery</li>
+                        </ol>
 
-        <h3>Weekly Schedule</h3>
-        <table>
-            <tr><th>Day</th><th>Workout</th><th>Time</th></tr>
-            <tr><td>Monday</td><td>Strength</td><td>6 PM</td></tr>
-            <tr><td>Wednesday</td><td>Cardio</td><td>6 PM</td></tr>
-            <tr><td>Friday</td><td>Yoga</td><td>7 AM</td></tr>
-        </table>
-        <p id="special-note">Tip: Consistency is more important than intensity!</p>
+                        <h3 class="mt-4">Weekly Schedule</h3>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead class="table-success">
+                                    <tr>
+                                        <th>Day</th>
+                                        <th>Workout</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Monday</td>
+                                        <td>Strength</td>
+                                        <td>6 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wednesday</td>
+                                        <td>Cardio</td>
+                                        <td>6 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday</td>
+                                        <td>Yoga</td>
+                                        <td>7 AM</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="alert alert-info mt-3" role="alert">
+                            <strong>Tip:</strong> Consistency is more important than intensity!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <img src="images/fit2.jpg" alt="Workout session" class="img-fluid rounded shadow">
+            </div>
+        </div>
     </div>
-
-    <img src="images/fit2.jpg" alt="Workout session" class="fit-img">
-</div>
+    <footer class="bg-success text-white text-center py-3 mt-5">
+        <div class="container">
+            <address class="mb-0">
+                Contact us: fitandwell@gmail.com
+            </address>
+            <p class="mb-0"><small>&copy; 2025 Healthy Lifestyle Team</small></p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
