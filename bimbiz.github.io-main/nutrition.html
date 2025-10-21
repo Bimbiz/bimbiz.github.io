@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Eating</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Fit & Well</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="fitness.html">Fitness</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nutrition.html">Nutrition</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wellness.html">Wellness</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <article class="card">
+            <div class="card-body">
+                <h2 class="card-title">Balanced Diet</h2>
+                <p class="card-text">
+                    Eating a variety of foods ensures your body gets the nutrients it needs.  
+                    Focus on <em>whole grains</em>, <strong>fruits</strong>, and vegetables.
+                </p>
+                
+                <ul class="list-group">
+                    <li class="list-group-item"><code>Vitamin C</code> rich fruits</li>
+                    <li class="list-group-item"><code>Whole Grains</code> like oats and rice</li>
+                    <li class="list-group-item"><code>Lean Protein</code> from chicken or beans</li>
+                    <li class="list-group-item"><code>Healthy Fats</code> from nuts and olive oil</li>
+                </ul>
+
+                <hr>
+
+                <h3 class="mt-4">Color Your Meal Mood!</h3>
+                <p>Different colors represent different meal moods — fresh greens for balance, orange for energy, pink for sweetness!</p>
+                <div class="text-center mb-3">
+                    <button id="randomColorBtn" class="btn btn-primary me-2">Random Color</button>
+                    <button id="cycleColorBtn" class="btn btn-warning me-2">Cycle Colors</button>
+                    <button id="resetColorBtn" class="btn btn-danger">Reset</button>
+                </div>
+                <div class="card bg-light text-dark w-75 mx-auto mt-3 shadow-sm">
+                    <div class="card-body">
+                        <p class="mb-0"><strong>Tip:</strong> Colorful plates encourage balanced nutrition — include fruits and vegetables of different colors in every meal!</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer class="bg-success text-white text-center py-3 mt-5">
+        <div class="container">
+            <address class="mb-0">
+                Contact us: fitandwell@gmail.com
+            </address>
+            <p class="mb-0"><small>&copy; 2025 Bizinskiy Timur</small></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const randomBtn = document.getElementById("randomColorBtn");
+        const cycleBtn = document.getElementById("cycleColorBtn");
+        const resetBtn = document.getElementById("resetColorBtn");
+        const colors = ["#e6ffe6", "#fff3cd", "#ffe6e6", "#e6f7ff", "#f9e6ff"];
+        let index = 0;
+        const defaultColor = getComputedStyle(document.body).backgroundColor;
+
+        randomBtn.addEventListener("click", () => {
+            const c= "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0");
+            document.body.style.backgroundColor = c;
+        });
+
+        cycleBtn.addEventListener("click", () => {
+            document.body.style.backgroundColor = colors[index];
+            index = (index + 1) % colors.length;
+        });
+
+        resetBtn.addEventListener("click", () => {
+            document.body.style.backgroundColor = defaultColor;
+        });
+    </script>
+</body>
+</html>
