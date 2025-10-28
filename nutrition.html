@@ -28,8 +28,8 @@
     <div class="container my-4">
         <article class="card">
             <div class="card-body">
-                <h2 class="card-title">Balanced Diet</h2>
-                <p class="card-text">
+                <h2 class="card-title text-center">Balanced Diet</h2>
+                <p class="card-text text-center">
                     Eating a variety of foods ensures your body gets the nutrients it needs.  
                     Focus on <em>whole grains</em>, <strong>fruits</strong>, and vegetables.
                 </p>
@@ -43,8 +43,8 @@
 
                 <hr>
 
-                <h3 class="mt-4">Color Your Meal Mood!</h3>
-                <p>Different colors represent different meal moods — fresh greens for balance, orange for energy, pink for sweetness!</p>
+                <h3 class="text-center mt-4">Color Your Meal Mood!</h3>
+                <p class="text-center">Different colors represent different meal moods — fresh greens for balance, orange for energy, pink for sweetness!</p>
                 <div class="text-center mb-3">
                     <button id="randomColorBtn" class="btn btn-primary me-2">Random Color</button>
                     <button id="cycleColorBtn" class="btn btn-warning me-2">Cycle Colors</button>
@@ -55,10 +55,28 @@
                         <p class="mb-0"><strong>Tip:</strong> Colorful plates encourage balanced nutrition — include fruits and vegetables of different colors in every meal!</p>
                     </div>
                 </div>
+                <hr>
+                <h3 class="text-center mb-3">You may hide this picture if salads scres you!</h3>
+
+                <div class="text-center mb-3">
+                    <img id="fadeImage" src="images/salad.jpeg" alt="Healthy Food" class="img-fluid rounded" style="max-width:300px;">
+                </div>
+                <div class="text-center mb-3">
+                    <button id="fadeInBtn" class="btn btn-success me-2">Show</button>
+                    <button id="fadeOutBtn" class="btn btn-danger me-2">Hide</button>
+                    <button id="fadeToggleBtn" class="btn btn-warning">Toggle</button>
+                </div>
+
+                <div class="text-center mb-3">
+                    <button id="panelToggle" class="btn btn-outline-dark mb-2">Toggle Tip</button>
+                    <div id="collapsiblePanel" class="border p-3 bg-light rounded">
+                        <p>Eat colorful fruits and vegetables every day for better health.</p>
+                    </div>
+                </div>
             </div>
         </article>
     </div>
-
+    
     <footer class="bg-success text-white text-center py-3 mt-5">
         <div class="container">
             <address class="mb-0">
@@ -67,7 +85,9 @@
             <p class="mb-0"><small>&copy; 2025 Bizinskiy Timur</small></p>
         </div>
     </footer>
-
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>

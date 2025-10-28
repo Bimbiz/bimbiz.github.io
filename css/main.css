@@ -67,3 +67,33 @@ h3, h5 {
 button.btn {
     border-radius: 8px;
 }
+
+.thumb:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+.accordion-header {
+  background: #e9f7ee;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.accordion-header:focus {
+  outline: 3px solid rgba(40,167,69,0.25);
+  outline-offset: 2px;
+}
+
+.accordion-body {
+  display: none;
+  background: #ffffff;
+}
+
+.accordion-header.open .accordion-icon {
+  transform: rotate(90deg);
+}
+
+.accordion-icon {
+  transition: transform 0.25s ease;
+  font-size: 1rem;
+}
+

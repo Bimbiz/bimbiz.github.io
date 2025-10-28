@@ -32,7 +32,7 @@
         </blockquote>
 
         <section class="card">
-            <div class="card-body">
+            <div class="card-body text-center">
                 <h2 class="card-title">Wellness Activities</h2>
                 <p class="card-text">Tips from one of our trainers: try meditation, journaling, walking in nature with or without music daily.</p>
             
@@ -44,6 +44,7 @@
                         <p class="card-text text-muted">Tip: <code>Take 10 minutes</code> every morning to breathe deeply and reset your mind.</p>
                     </div>
                 </div>
+
                 <div class="card bg-light text-dark w-75 mx-auto my-4 shadow-sm">
                     <div class="card-body text-center">
                         <h5>Mind Focus Exercise</h5>
@@ -54,9 +55,58 @@
                         <p id="sortedOutput" class="fw-bold mt-3"></p>
                     </div>
                 </div>
+
+                <h3 class="text-center mb-3">Gallery for motivation</h3>
+                <div class="text-center">
+                    <img id="galleryMain" src="images/sports.jpeg" class="img-fluid rounded mb-3" style="max-width:400px;">
+                    <div>
+                        <img src="images/sports.jpeg" class="thumb img-thumbnail mx-1 mb-3" data-large="images/sports.jpeg" alt="">
+                        <img src="images/wellness1.jpeg" class="thumb img-thumbnail mx-1 mb-3" data-large="images/wellness1.jpeg" alt="">
+                        <img src="images/wellness2.jpeg" class="thumb img-thumbnail mx-1 mb-3" data-large="images/wellness2.jpeg" alt="">
+                        <img src="images/wellness3.jpg" class="thumb img-thumbnail mx-1 mb-3" data-large="images/wellness3.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </section>
     </div>
+
+    <hr class="my-4">
+    <section class="accordion-section w-75 mx-auto">
+        <h3 class="text-center mb-3">Wellness Topics</h3>
+
+        <div class="accordion-item mb-2">
+            <div class="accordion-header p-3 rounded d-flex justify-content-between align-items-center"
+            role="button" tabindex="0" aria-expanded="false">
+                <span>Daily Meditation</span>
+                <span class="accordion-icon">▸</span>
+            </div>
+            <div class="accordion-body border p-3 rounded mt-2">
+                <p class="mb-0">Short guided meditation: 5–10 minutes to reduce stress. Try breathing 4-4-4.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item mb-2">
+            <div class="accordion-header p-3 rounded d-flex justify-content-between align-items-center"
+                role="button" tabindex="0" aria-expanded="false">
+                <span>Sleep Hygiene</span>
+                <span class="accordion-icon">▸</span>
+            </div>
+            <div class="accordion-body border p-3 rounded mt-2">
+                <p class="mb-0">Keep consistent bedtimes, reduce screens 30 minutes before sleep, and relax.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item mb-2">
+            <div class="accordion-header p-3 rounded d-flex justify-content-between align-items-center"
+            role="button" tabindex="0" aria-expanded="false">
+                <span>Journaling</span>
+                <span class="accordion-icon">▸</span>
+            </div>
+            <div class="accordion-body border p-3 rounded mt-2">
+                <p class="mb-0">Write 3 things you're grateful for — small, daily wins build resilience.</p>
+            </div>
+        </div>
+    </section>
 
     <footer class="bg-success text-white text-center py-3 mt-5">
         <div class="container">
@@ -67,6 +117,8 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
