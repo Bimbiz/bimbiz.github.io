@@ -20,26 +20,6 @@ $(document).ready(function () {
         $('#panelToggle').click(() => $('#collapsiblePanel').slideToggle(300));
     }
 
-    if ($('#jq-list').length) {
-        $('#addItemBtn').on('click', function () {
-            const txt = $('#newItemInput').val().trim();
-                if (!txt) {
-                    alert('Please enter an item.');
-                    return;
-                }
-            $('#jq-list').append(`<li class="list-group-item">${$('<div>').text(txt).html()} <button class="btn btn-sm btn-danger float-end remove-item">Remove</button></li>`);
-            $('#newItemInput').val('');
-        });
-
-    $('#jq-list').on('click', '.remove-item', function (e) {
-        e.preventDefault();
-        $(this).closest('li').fadeOut(200, function () { $(this).remove(); });
-    });
-
-    $('#removeLastBtn').on('click', function () {
-        $('#jq-list li').last().remove();
-    });
-  }
 
     if ($('#changeImgBtn').length && $('#changeableImg').length) {
         $('#changeImgBtn').click(function () {
@@ -52,6 +32,47 @@ $(document).ready(function () {
         $('#changeLinkBtn').click(function () {
             const newHref = $(this).data('href') || 'https://www.example.com';
             $('#dynamicLink').attr('href', newHref).text('Open updated link');
+        });
+    }
+
+    if ($('#jq-list').length) {
+        const savedQuestions = JSON.parse(localStorage.getItem('questions')) || [];
+        savedQuestions.forEach(q => {
+            $('#jq-list').append(createListItem(q));
+        });
+
+        function createListItem(text) {
+            return $(`<li class="list-group-item">${$('<div>').text(text).html()} <button class="btn btn-sm btn-danger float-end remove-item">Remove</button></li>`);
+        }
+
+        $('#addItemBtn').on('click', function () {
+            const txt = $('#newItemInput').val().trim();
+            if (!txt) {
+                alert('Please enter a question.');
+                return;
+            }
+
+            $('#jq-list').append(createListItem(txt));
+            savedQuestions.push(txt);
+            localStorage.setItem('questions', JSON.stringify(savedQuestions));
+            $('#newItemInput').val('');
+        });
+
+
+        $('#jq-list').on('click', '.remove-item', function (e) {
+            e.preventDefault();
+            const li = $(this).closest('li');
+            const text = li.text().replace('Remove', '').trim();
+            const index = savedQuestions.indexOf(text);
+            if (index > -1) savedQuestions.splice(index, 1);
+                localStorage.setItem('questions', JSON.stringify(savedQuestions));
+                li.fadeOut(200, function () { $(this).remove(); });
+        });
+
+        $('#removeLastBtn').on('click', function () {
+            $('#jq-list li').last().remove();
+            savedQuestions.pop();
+            localStorage.setItem('questions', JSON.stringify(savedQuestions));
         });
     }
 
