@@ -25,14 +25,18 @@ body {
     color: #222;
 }
 
-p { text-indent: 18px; }
+p {
+    text-indent: 18px;
+}
 
 button:focus, a:focus, input:focus { 
     outline: 3px solid rgba(40, 167, 69, 0.25);
     outline-offset: 2px;
 }
 
-.card { border-radius: 12px; }
+.card {
+    border-radius: 12px;
+}
 
 code {
     color: darkblue;
@@ -69,31 +73,287 @@ button.btn {
 }
 
 .thumb:hover {
-  filter: brightness(1.1);
-  transform: scale(1.05);
-  transition: all 0.3s ease;
+    filter: brightness(1.1);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
+
 .accordion-header {
-  background: #e9f7ee;
-  cursor: pointer;
-  border: 1px solid rgba(0,0,0,0.05);
+    background: #e9f7ee;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.05);
 }
+
 .accordion-header:focus {
-  outline: 3px solid rgba(40,167,69,0.25);
-  outline-offset: 2px;
+    outline: 3px solid rgba(40,167,69,0.25);
+    outline-offset: 2px;
 }
 
 .accordion-body {
-  display: none;
-  background: #ffffff;
+    display: none;
+    background: #ffffff;
 }
 
 .accordion-header.open .accordion-icon {
-  transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .accordion-icon {
-  transition: transform 0.25s ease;
-  font-size: 1rem;
+    transition: transform 0.25s ease;
+    font-size: 1rem;
 }
 
+body {
+    background-color: #ffffff;
+    color: #212529;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card, .navbar, footer {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border-color: #333;
+}
+
+body.dark-mode .card-body {
+    color: #f1f1f1;
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card-text {
+    color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+    background-color: #0a3d1a !important;
+}
+body.dark-mode footer {
+    background-color: #0a3d1a !important;
+    color: #f1f1f1;
+}
+
+body.dark-mode a {
+    color: #9dd9a3;
+}
+body.dark-mode a:hover {
+    color: #c0f0ca;
+}
+
+body.dark-mode .text-muted {
+    color: #aaa !important;
+}
+
+body.dark-mode .text-dark {
+    color: #f1f1f1 !important;
+}
+
+body.dark-mode .btn {
+    border-color: #28a745;
+    color: #e0e0e0;
+}
+body.dark-mode .btn:hover {
+    background-color: #28a745;
+    color: #000;
+}
+
+body.dark-mode .btn-outline-secondary,
+body.dark-mode .btn-outline-success,
+body.dark-mode .btn-outline-primary,
+body.dark-mode .btn-outline-dark {
+    background-color: #1e1e1e;
+    border-color: #28a745;
+    color: #9dd9a3;
+}
+
+body.dark-mode .btn-outline-secondary:hover,
+body.dark-mode .btn-outline-success:hover,
+body.dark-mode .btn-outline-primary:hover,
+body.dark-mode .btn-outline-dark:hover {
+    background-color: #28a745;
+    color: #000;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #222;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #aaa;
+}
+body.dark-mode .form-check-label {
+    color: #f1f1f1;
+}
+
+body.dark-mode .form-label {
+    color: #f1f1f1;
+}
+
+body.dark-mode table {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode .table {
+    color: #f1f1f1;
+    background-color: #1e1e1e;
+}
+
+body.dark-mode th {
+    background-color: #2a2a2a;
+    color: #9dd9a3;
+}
+
+body.dark-mode td {
+    border-top: 1px solid #333;
+    color: #f1f1f1;
+    background-color: #1e1e1e;
+}
+
+body.dark-mode tbody,
+body.dark-mode tbody tr,
+body.dark-mode tbody td {
+    background-color: #1e1e1e !important;
+    color: #f1f1f1 !important;
+}
+
+body.dark-mode .table-success {
+    background-color: #1a3c25 !important;
+    color: #d4eed4 !important;
+}
+
+body.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #252525 !important;
+}
+
+body.dark-mode .table-striped tbody tr:nth-of-type(even) {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-mode .table-hover tbody tr:hover {
+    background-color: #2a2a2a !important;
+}
+
+body.dark-mode .list-group-item {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border-color: #333;
+}
+
+body.dark-mode .alert {
+    background-color: #1f2d1f;
+    color: #a0f0a0;
+    border-color: #28a745;
+}
+
+body.dark-mode .alert-warning {
+    background-color: #3d3010;
+    color: #f0d090;
+    border-color: #8a6d3b;
+}
+
+body.dark-mode .alert-info {
+    background-color: #0d2d3d;
+    color: #90d0f0;
+    border-color: #3b708a;
+}
+
+body.dark-mode .accordion-header {
+    background-color: #1a3c25;
+    border-color: #2b6243;
+    color: #d4eed4;
+}
+body.dark-mode .accordion-body {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode blockquote {
+    border-left-color: #9dd9a3;
+    color: #d4d4d4;
+}
+
+body.dark-mode .blockquote-footer {
+    color: #aaa;
+}
+
+body.dark-mode code {
+    color: #a3e635;
+    background-color: #252525;
+}
+
+body.dark-mode #collapsiblePanel {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border: 1px solid #333;
+}
+
+body.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-mode ::-webkit-scrollbar {
+    width: 10px;
+}
+body.dark-mode ::-webkit-scrollbar-thumb {
+    background: #28a745;
+    border-radius: 5px;
+}
+body.dark-mode ::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+body.dark-mode figcaption {
+    color: #aaa;
+}
+
+body.dark-mode address {
+    color: #f1f1f1;
+}
+
+#themeToggle {
+    font-size: 1.2rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+@media (min-width: 992px) {
+    #themeToggle {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav .nav-item:has(#themeToggle) {
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    #themeToggle {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.navbar-nav {
+    align-items: stretch;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        align-items: center;
+    }
+}
