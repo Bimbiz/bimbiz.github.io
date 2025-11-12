@@ -1,3 +1,5 @@
-Only minor changes:
-  Added EmailJs API to send and get emails on contact page
-  Added Local Storage feature on contact page, now it remembers what questions you were asking in tle list
+Major changes:
+  Added Dark-mode;
+  Made most of the elements looking good with dark-mode;
+Minor changes:
+  Title font-weight changed to bold;
